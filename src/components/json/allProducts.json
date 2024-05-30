@@ -1,0 +1,39 @@
+[
+  {
+    "value": "electronics",
+    "en": "electronics",
+    "es": "Electrónicos",
+    "render": true
+  },
+  { "value": "jewelery", "en": "jewelery", "es": "Joyería", "render": true },
+  {
+    "value": "menClothing",
+    "en": "men's clothing",
+    "es": "Ropa de Hombre",
+    "render": true
+  },
+  {
+    "value": "womenClothing",
+    "en": "women's clothing",
+    "es": "Ropa de Mujer",
+    "render": true
+  },
+  {
+    "value": "allProducts",
+    "en": "all products",
+    "es": "Todos los Productos",
+    "render": false
+  },
+  {
+    "value": "bestSellers",
+    "en": "best sellers",
+    "es": "Más Vendidos",
+    "render": false
+  },
+  {
+    "value": "topRated",
+    "en": "top rated",
+    "es": "Mejores Valorados",
+    "render": false
+  }
+]
