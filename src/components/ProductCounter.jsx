@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ProductCounter = ({ stock }) => {
+const ProductCounter = ({ stock, addProduct }) => {
   //10
   const [contador, setContador] = useState(1);
   const [itemStock, setItemStock] = useState(stock);
@@ -17,12 +17,12 @@ const ProductCounter = ({ stock }) => {
     }
   };
 
-  const onAdd = () => {
-    if (contador <= itemStock) {
-      setItemStock(itemStock - contador);
-      setContador(1);
-    }
-  };
+  // const onAdd = () => {
+  //   if (contador <= itemStock) {
+  //     setItemStock(itemStock - contador);
+  //     setContador(1);
+  //   }
+  // };
 
   useEffect(() => {
     setItemStock(stock);
@@ -60,7 +60,7 @@ const ProductCounter = ({ stock }) => {
           <button
             type="button"
             className="btn bg-black text-white text-uppercase rounded-0"
-            onClick={onAdd}
+            onClick={addProduct}
           >
             Agregar Al Carrito
           </button>

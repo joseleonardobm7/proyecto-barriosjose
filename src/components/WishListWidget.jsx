@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { WishListContext } from "./context/WishListContext";
+
 const WishListWidget = () => {
+  const { getProductsInList } = useContext(WishListContext);
   return (
     <div className="wishlist position-relative">
       <a className="text-decoration-none" href="#">
@@ -14,7 +18,8 @@ const WishListWidget = () => {
         className="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
         id="wishlist-qty"
       >
-        0<span className="visually-hidden"> articles in wishlist </span>
+        {getProductsInList()}
+        <span className="visually-hidden"> articles in wishlist </span>
       </span>
     </div>
   );

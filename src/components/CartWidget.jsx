@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { CartContext } from "./context/CartContext";
+
 const CartWidget = () => {
+  const { getProductsInCart } = useContext(CartContext);
+
   return (
     <div className="cart position-relative">
       <a className="text-decoration-none" href="#">
@@ -14,7 +19,8 @@ const CartWidget = () => {
         className="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
         id="shopping-cart-qty"
       >
-        0<span className="visually-hidden"> articles in cart </span>
+        {getProductsInCart()}
+        <span className="visually-hidden"> articles in cart </span>
       </span>
     </div>
   );

@@ -1,6 +1,10 @@
 import ProductCounter from "./ProductCounter";
+import { useContext } from "react";
+import { CartContext } from "./context/CartContext";
 
 const ProductDetail = ({ product, stock }) => {
+  const { addProduct } = useContext(CartContext);
+
   const generateStarsRatings = (rate, low, up) => {
     const rating = rate || 0;
     const icon =
@@ -62,7 +66,7 @@ const ProductDetail = ({ product, stock }) => {
           </div>
           <p className="small">{product.description}</p>
           <p className="small"> Stock Disponible: {stock}</p>
-          <ProductCounter stock={product.stock} />
+          <ProductCounter stock={product.stock} addProduct={addProduct} />
         </div>
       </div>
     </div>
